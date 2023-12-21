@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+
+</head>
+<body>
+    
+    <section class="py-5">
+        <div class="container">
+            <div class="w-75 mx-auto" >
+                <h1>Product management system</h1>
+                <div class="mb-5 ">
+                    <label for="pn">Product Name</label><br>
+                    <input id="pn" type="text" name="pn" class="form-control"/>
+
+                    <span id="nameError" class="text-danger d-none">
+                        Please enter the first letter as a capital letter
+                    </span>
+                </div>
+                <div class="mb-5">
+                    <label for="pp">Product Price</label><br>
+                    <input id="pp" type="text" name="pp" class="form-control"/>
+
+                    <span id="priceError" class="text-danger d-none">
+                        Please enter from 1000 to 10000
+                    </span>
+                </div>
+                <div class="mb-5">
+                    <label for="pc">Product Category</label><br>
+                    <input id="pc" type="text" name="pc" class="form-control"/>
+
+                    <span id="categoryError" class="text-danger d-none">
+                        Please enter mobile or screen or watch
+                    </span>
+                </div>
+                <div class="mb-5">
+                    <label for="pd">Product Description</label><br>
+                    <textarea name="pd" id="pd" class="form-control"></textarea>
+
+
+                    <span id="descyError" class="text-danger d-none">
+                        Please enter 250 characters
+                    </span>
+                </div>
+                
+                <button id="addBtn" class="btn btn-primary" onclick="AddProduct()">Add Product</button>
+                <button id="updateBtn" class="btn btn-outline-primary d-none" onclick="updateProduct()">updat Product</button>
+
+            </div>
+        </div>
+
+    </section>
+    <section>
+        <div class="container">
+            <div class="w-75 mx-auto">
+
+
+
+                <div class="mb-5 ">
+                    <label for="psearch">search a Product </label><br>
+                    <input
+                    oninput="searchProduct()";
+
+
+                     id="psearch" 
+                     type="text" 
+                     name="pp" 
+                     class="form-control"/>
+                </div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Index</th>
+                            <th>productName</th>
+                            <th>productPrice</th>
+                            <th>productCategory</th>
+                            <th>productDesc</th>
+                            <th>Update</th>
+                            <th>Delet</th>
+                        </tr>
+                    </thead>
+                    <tbody id="products">
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    
+    <script src="./main.js"></script>
+</body>
+</html>
